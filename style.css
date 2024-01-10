@@ -1,0 +1,111 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.note-input-container {
+  position: relative;
+}
+
+textarea#noteInput {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-icon {
+  margin-left: 10px;
+  font-size: 24px;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+button#addNoteBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  position: fixed;
+  top: 60px;
+  right: 35px;
+}
+
+button#addNoteBtn:hover {
+  background-color: #45a049;
+}
+
+/* Your existing CSS code */
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  textarea#noteInput {
+    width: calc(100% - 20px);
+    max-width: 100%;
+  }
+
+  button#addNoteBtn {
+    position: static; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Example of another media query for smaller devices */
+@media only screen and (max-width: 480px) {
+  textarea#noteInput {
+    width: calc(100% - 20px);
+    height: 80px;
+    font-size: 14px;
+  }
+}
